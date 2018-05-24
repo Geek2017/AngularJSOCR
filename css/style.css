@@ -110,7 +110,7 @@ table {
   border: 2px dashed #ccc; 
   width: 580px;
   height: 780px;
-  /* position: absolute; */
+  position: absolute;
   
 }
 

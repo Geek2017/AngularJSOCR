@@ -29,14 +29,7 @@
 
                                 <div class="row float-right">
                                         <div>
-                                                <div class="card text-white bg-primary mb-3 " style="max-width: 20rem;">
-                                                        <div class="card-header">Open PDF</div>
-                                                        <div class="card-body">
-                                                                <button id="uploadit" type="button" class="btn btn-secondary btn-block">Upload File</button>
-                                                                <input on-file-change="ocrselect.fileChangeHandler;" id="img-input" type="file" name="pic" accept="image/*, application/pdf"
-                                                                        hidden>
-                                                        </div>
-                                                </div>
+                                                
                                                 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                                                         <div class="card-header">Snap view</div>
                                                         <div class="card-body">
@@ -49,7 +42,10 @@
                                                 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                                                         <div class="card-header">Controls</div>
                                                         <div class="card-body">
-
+                                                                <button id="uploadit" type="button" class="btn btn-secondary btn-block">Upload File</button>
+                                                                <input on-file-change="ocrselect.fileChangeHandler;" id="img-input" type="file" name="pic" accept="image/*, application/pdf"
+                                                                        hidden>
+                                                                        <br>
                                                                 <div class="btn-group btn-block" role="group" aria-label="Basic example">
                                                                   
                                                                         <button type="button" class="btn btn-secondary btn-block" ng-click="prevp();">&laquo; Prev</button>
