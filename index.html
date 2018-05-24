@@ -55,6 +55,8 @@
 
                                                                         <button type="button" class="btn btn-secondary btn-block" ng-click="prevp();">&laquo; Prev</button>
                                                                         <button type="button" class="btn btn-secondary " ng-click="zoomIn();"> &#43;</button>
+                                                                        <button type="button" class="btn btn-secondary " ng-click="dragIt();"> &#10019;</button>
+                                                                        <button id="crpt" type="button"  class="btn btn-secondary" ng-click="cropIt();"> &#9986;</button>
                                                                         <button type="button" class="btn btn-secondary " ng-click="zoomOut();"> &#45;</button>
                                                                         <button type="button" class="btn btn-secondary btn-block" ng-click="nextp();">Next &raquo;</button>
                                                                 </div>
@@ -97,13 +99,7 @@
                                                                                 <br>
                                                                                 <input type='button' value='Remove Fields' id='removeButton' class="btn btn-secondary btn-block">
 
-                                                                                <!-- <input type='button' value='Get TextBox Value' id='getButtonValue'> -->
-
-                                                                                <!-- <input type='button' value='Google OCR' id="gAPI" class="btn btn-secondary btn-block"> -->
-
-                                                                                <!-- <input type='button' value='Validate' id="refresh" class="btn btn-secondary btn-block"> -->
-
-                                                                                <input type='button' value='Analyze' id="cocr" class="btn btn-secondary btn-block">
+                                                                         
 
 
 
@@ -167,13 +163,11 @@
 
         </center>
 
-      
+        <script src="js/drag.js"></script>
         <script src="js/angular.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-resource.min.js"></script>
-
-
-
+        
         <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/allFactories.js"></script>

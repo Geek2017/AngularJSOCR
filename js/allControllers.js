@@ -168,6 +168,17 @@
 			 
 		}
 
+		localStorage.setItem('switch',1);
+
+		$scope.dragIt = function(){
+			console.log('saving... 0')
+			$("#image-area").attachDragger(localStorage.setItem('switch',0));		
+		}
+
+		$scope.cropIt = function(){
+			console.log('saving... 1')
+			localStorage.setItem('switch',1);
+		}
 
 		$scope.nextp = function(){
 			$scope.ocrselect.onPageSelect($scope.ocrselect.pdf.currentPage=$scope.ocrselect.pdf.currentPage+1);
@@ -207,14 +218,16 @@
 			return [x, y];
 		}
 		function initBox(event){
+			if (localStorage.getItem('switch')=='1'){
 			event.preventDefault(); 
 			vm.mouseIsDown = true;
 			vm.removeBox();
 			var xy = getMousePos(event, vm.$uploadedCanvas);
 			boxDrawer.init(xy);
+			}
 		}
 		function drawBox(event){
-			if(vm.mouseIsDown){
+			if(vm.mouseIsDown && localStorage.getItem('switch')=='1'){
 				var xy = getMousePos(event, vm.$uploadedCanvas);
 				vm.boxSelect = boxDrawer.draw(xy);
 				vm.isActive = 'box-active';
@@ -222,7 +235,7 @@
 		}
 		function captureBox(event){
 			vm.mouseIsDown = false;
-			if(vm.isActive){
+			if(vm.isActive && localStorage.getItem('switch')=='1'){
 				var box = boxDrawer.getBox();
 				imgPDF.captureImg(box, renderCapturedImg);
 				vm.removeBox();

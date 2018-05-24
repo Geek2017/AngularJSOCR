@@ -127,6 +127,7 @@ table {
 }
 /* the up/down/left/right buttons */
 ::-webkit-scrollbar-button {
+
   
 }
 /* the zone where the scroll will happen */
@@ -143,7 +144,7 @@ table {
 }
 /* what stands in the corner, between the horizontal and the vertical scrollbars */
 ::-webkit-scrollbar-corner {
-  background-color: #375a7f;
+
   
 }
 /* the resizer thingy into that corner */
