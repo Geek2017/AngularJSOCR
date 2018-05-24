@@ -173,11 +173,13 @@
 		$scope.dragIt = function(){
 			console.log('saving... 0')
 			$("#image-area").attachDragger(localStorage.setItem('switch',0));		
+			$( ".card-body" ).mousedown();
 		}
 
 		$scope.cropIt = function(){
 			console.log('saving... 1')
 			localStorage.setItem('switch',1);
+			$( ".card-body" ).mousedown();
 		}
 
 		$scope.nextp = function(){

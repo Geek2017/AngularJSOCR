@@ -123,7 +123,7 @@ table {
 }
 /* the scrollbar area itself */
 ::-webkit-scrollbar {
-  
+  display: none; 
 }
 /* the up/down/left/right buttons */
 ::-webkit-scrollbar-button {

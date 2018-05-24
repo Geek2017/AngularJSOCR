@@ -23,3 +23,17 @@ $.fn.attachDragger = function(){
     });
 
 }
+
+// setInterval(function(){ 
+    
+//     console.log('checking. . .')
+//     if (localStorage.getItem('switch')=='0'){
+//     attachment = true;
+//     console.log('0')
+//     }else{
+//     attachment = false
+//     console.log('1')
+//     }
+
+
+// }, 100);
