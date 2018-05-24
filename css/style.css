@@ -114,8 +114,8 @@ table {
   
 }
 
-
-
+.grab {cursor: -webkit-grab; cursor: grab;}
+.crosshair {cursor: crosshair;}
 .container {
   width: 200px;
   height: 300px;
@@ -186,7 +186,7 @@ table {
       position: absolute !important;
       cursor: default !important;
       background-color: rgba(28, 190, 239, 0.6);
-      border: 1px solid #ebe0e8; }
+      border: 1px solid #444444; }
 
 .box-active {
   display: block !important; }

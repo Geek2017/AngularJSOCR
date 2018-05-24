@@ -174,12 +174,16 @@
 			console.log('saving... 0')
 			$("#image-area").attachDragger(localStorage.setItem('switch',0));		
 			$( ".card-body" ).mousedown();
+			$("#container").addClass("grab");
+			$("#container").removeClass("crosshair");
 		}
 
 		$scope.cropIt = function(){
 			console.log('saving... 1')
 			localStorage.setItem('switch',1);
 			$( ".card-body" ).mousedown();
+			$("#container").removeClass("grab");
+			$("#container").addClass("crosshair");
 		}
 
 		$scope.nextp = function(){
