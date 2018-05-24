@@ -29,6 +29,42 @@
 
                                 <div class="row float-right">
                                         <div>
+                                                        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                                                                        <div class="card-header">Controls</div>
+                                                                        <div class="card-body">
+                                                                                <button id="uploadit" type="button" class="btn btn-secondary btn-block ">Upload File</button>
+                                                                                <input on-file-change="ocrselect.fileChangeHandler;" id="img-input" type="file" name="pic" accept="image/*, application/pdf"
+                                                                                        hidden>
+                                                                                        <br>
+                                                                                <div class="btn-group btn-block" role="group" aria-label="Basic example">
+                                                                                  
+                                                                                        <button type="button" class="btn btn-secondary btn-block btn-sm" ng-click="prevp();">&laquo;Prev </button>
+                                                                                        <button type="button" class="btn btn-secondary btn-sm" ng-click="zoomIn();"> &#43;</button>
+                                                                                        <button type="button" class="btn btn-secondary btn-sm" ng-click="dragIt();" > &#10019;</button>
+                                                                                        <button id="crpt" type="button"  class="btn btn-secondary btn-sm" ng-click="cropIt();" > &#9986;</button>
+                                                                                        <button type="button" class="btn btn-secondary btn-sm" ng-click="zoomOut();"> &#45;</button>
+                                                                                        <button type="button" class="btn btn-secondary btn-block btn-sm" ng-click="nextp();"> Next &raquo;</button>
+                                                                                </div>
+                                                                                <br>
+                                                                                <br>
+                                                                                <!-- <label>Language:</label> -->
+                                                                                <select class="form-control" ng-model="ocrselect.langs.selectedLang" name="language" id="language" ng-options="lang as lang for lang in ocrselect.langs.list">
+                                                                                </select>
+                                                                                <!-- <label>API:</label> -->
+                                                                                <select class="form-control" id="ocrapi">
+                                                                                        <option value="0">Google API</option>
+                                                                                        <option value="1">Teseract JS</option>
+                                                                                        <option disabled>Other's</option>
+                                                                                </select>
+                                                                                <!-- <label>Page:</label> -->
+                                                                                <select class="form-control" ng-class="ocrselect.dropZone" ng-model="ocrselect.pdf.currentPage" name="pageSelect" id="pageSelect"
+                                                                                        ng-options="page as page for page in ocrselect.pdf.pageList"
+                                                                                        ng-change="ocrselect.onPageSelect(ocrselect.pdf.currentPage)">
+                                                                                </select>
+                                                                             
+                                                                               
+                                                                        </div>
+                                                                </div>
                                                 
                                                 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                                                         <div class="card-header">Snap view</div>
@@ -39,42 +75,7 @@
                                                                 </div>
                                                         </div>
                                                 </div>
-                                                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                                                        <div class="card-header">Controls</div>
-                                                        <div class="card-body">
-                                                                <button id="uploadit" type="button" class="btn btn-secondary btn-block">Upload File</button>
-                                                                <input on-file-change="ocrselect.fileChangeHandler;" id="img-input" type="file" name="pic" accept="image/*, application/pdf"
-                                                                        hidden>
-                                                                        <br>
-                                                                <div class="btn-group btn-block" role="group" aria-label="Basic example">
-                                                                  
-                                                                        <button type="button" class="btn btn-secondary btn-block" ng-click="prevp();">&laquo; Prev</button>
-                                                                        <button type="button" class="btn btn-secondary " ng-click="zoomIn();"> &#43;</button>
-                                                                        <button type="button" class="btn btn-secondary " ng-click="dragIt();" > &#10019;</button>
-                                                                        <button id="crpt" type="button"  class="btn btn-secondary" ng-click="cropIt();" > &#9986;</button>
-                                                                        <button type="button" class="btn btn-secondary " ng-click="zoomOut();"> &#45;</button>
-                                                                        <button type="button" class="btn btn-secondary btn-block" ng-click="nextp();">Next &raquo;</button>
-                                                                </div>
-                                                                <br>
-                                                                <br>
-                                                                <!-- <label>Language:</label> -->
-                                                                <select class="form-control" ng-model="ocrselect.langs.selectedLang" name="language" id="language" ng-options="lang as lang for lang in ocrselect.langs.list">
-                                                                </select>
-                                                                <!-- <label>API:</label> -->
-                                                                <select class="form-control" id="ocrapi">
-                                                                        <option value="0">Google API</option>
-                                                                        <option value="1">Teseract JS</option>
-                                                                        <option disabled>Other's</option>
-                                                                </select>
-                                                                <!-- <label>Page:</label> -->
-                                                                <select class="form-control" ng-class="ocrselect.dropZone" ng-model="ocrselect.pdf.currentPage" name="pageSelect" id="pageSelect"
-                                                                        ng-options="page as page for page in ocrselect.pdf.pageList"
-                                                                        ng-change="ocrselect.onPageSelect(ocrselect.pdf.currentPage)">
-                                                                </select>
-                                                             
-                                                               
-                                                        </div>
-                                                </div>
+                                              
                                                 <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                                                         <div class="card-header">Fields</div>
                                                         <div class="card-body">
@@ -83,16 +84,16 @@
 
 
 
-                                                                                <div id='TextBoxesGroup'>
-                                                                                        <div id="TextBoxDiv1" class="input-group-prepend">
-                                                                                                <label class="editable input-group-text">Field #1 : </label>
-                                                                                                <input type='textbox' class="form-control" id='field1'>
+                                                                                <div id='TextBoxesGroup' >
+                                                                                        <div id="TextBoxDiv1" class="input-group-prepend ">
+                                                                                                <label class="editable input-group-text ">Field #1 : </label>
+                                                                                                <input type='textbox' class="form-control btn-sm" id='field1'>
                                                                                                 <!-- <input type='button' value='X' id='removeButton'> -->
                                                                                         </div>
                                                                                 </div>
                                                                                 <!-- <input type='button' value='Add Button' id='addButton' > -->
                                                                                 <br>
-                                                                                <input type='button' value='Remove Fields' id='removeButton' class="btn btn-secondary btn-block">
+                                                                                <input type='button' value='Remove Fields' id='removeButton' class="btn btn-secondary btn-block btn-sm">
 
                                                                          
 
@@ -101,7 +102,7 @@
                                                                                 <br>
                                                                                 <a id='saveit' download="" style="display:none;" />
 
-                                                                                <a href="#" onclick="downloadPDF();" class="btn btn-secondary btn-block">Save</a>
+                                                                                <a href="#" onclick="downloadPDF();" class="btn btn-secondary btn-block btn-sm">Save</a>
 
 
 

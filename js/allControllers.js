@@ -290,7 +290,7 @@
 	 
 		newTextBoxDiv.after().html('<label class="editable input-group-text">Field #'+ counter + ' : </label>' +
 			  '<input type="text" class="form-control" name="textbox' + counter +
-			  '" id="field' + counter + '" value="" >');
+			  '" id="field' + counter + '" value="" >' );
 			 //  '<input type="button" value="X" id="removeButton">');
 	 
 		newTextBoxDiv.appendTo("#TextBoxesGroup");
