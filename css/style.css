@@ -22,6 +22,7 @@
 
 canvas {
     border: 1px solid black;
+    
 }
 
 strong {
@@ -109,7 +110,7 @@ table {
 .drop-zone {
   border: 2px dashed #ccc; 
   width: 580px;
-  height: 780px;
+  height: 845px;
   position: absolute;
   
 }

@@ -53,6 +53,7 @@
 			vm.removeBox();
 			imgPDF.checkImgOrPdf(file, uploadImg, uploadPdf);
 
+		
 			// $('#image-area').append("<object id='thisocr'  style='width:100%; height:100%; margin:1%;'  type='text/html' scrolling='no' data='./nonocr'></object>");
 
 		
@@ -97,15 +98,24 @@
 		}
 
 		function renderIMG(canvas, options){
+
 			var context = canvas.getContext('2d');
 			var dx = options[5],
 				dy = options[6],
 				dw = options[7],
 				dh = options[8];
+				
+
 			context.clearRect(dx, dy, dw, dh);
+
+			// dw++; 
+			// dh++;
+			
 			canvas.width = dw;
 			canvas.height = dh;
 			context.drawImage.apply(context, options);
+
+			console.log('pic::',dw,dh);
 		}
 
 		function uploadPdf(){
@@ -152,7 +162,7 @@
 		$scope.zoomIn = function(){
 			if(localStorage.getItem('zv')<5){
 			var inc=localStorage.getItem('zv');
-			inc=inc*1+0.1;
+			inc=inc*1+0.5;
 			localStorage.setItem('zv',inc)
 			$scope.ocrselect.onPageSelect($scope.ocrselect.pdf.currentPage=$scope.ocrselect.pdf.currentPage);
 		   }
@@ -161,7 +171,7 @@
 		$scope.zoomOut = function(){
 			if(localStorage.getItem('zv')>=1){
 				var inc=localStorage.getItem('zv');
-				inc=inc*1-0.1;
+				inc=inc*1-0.5;
 				localStorage.setItem('zv',inc)
 				$scope.ocrselect.onPageSelect($scope.ocrselect.pdf.currentPage=$scope.ocrselect.pdf.currentPage);
 			   }
@@ -345,7 +355,7 @@
 					success: function (response) {
 					console.log(response.responses[0].fullTextAnnotation.text);
 	
-					$scope.addfields();
+					// $scope.addfields();
 							setfocus();
 	
 					if($('#field1').val()==''){	
@@ -415,7 +425,7 @@
 		
 			Tesseract.recognize(dataURL, language)
 					.then(function (res) {
-						$scope.addfields();
+						// $scope.addfields();
 						console.log('result was:',language +"::"+ res.text)
 					    setfocus();
 					
