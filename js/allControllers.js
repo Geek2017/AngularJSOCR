@@ -22,8 +22,8 @@
 			pageList: [1],
 			currentPage: 1
 		};
-	
 
+       $('#sys').hide();
 
 		vm.capturedCanvas = document.getElementById('test-area');
 
