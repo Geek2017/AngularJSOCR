@@ -23,7 +23,17 @@
 			currentPage: 1
 		};
 
-       $('#sys').hide();
+	   $('#sys').hide();
+	   
+	   $scope.logIn= function(){
+		   if($('#email').val() !=="" && $('#pwd').val()){
+			$('#sys').show();
+			$('#document').hide();
+
+		   }else{
+			   alert('Password & username required')
+		   }
+	   }
 
 		vm.capturedCanvas = document.getElementById('test-area');
 
