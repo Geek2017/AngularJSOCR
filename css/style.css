@@ -197,3 +197,13 @@ table {
     max-height:100%;
 }
    
+.parent {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -190px;
+}
+
