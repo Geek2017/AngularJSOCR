@@ -72,7 +72,8 @@
                                                                         <button type="button" class="btn btn-secondary btn-block btn-sm" ng-click="prevp();">&laquo; Prev </button>
                                                                         <button type="button" class="btn btn-secondary btn-sm" ng-click="zoomIn();"> &#43;</button>
                                                                         <button type="button" class="btn btn-secondary btn-sm" ng-click="dragIt();"> &#10019;</button>
-                                                                        <button id="crpt" type="button" class="btn btn-secondary btn-sm" ng-click="cropIt();"> &#9986;</button>
+                                                                        <button type="button" class="btn btn-secondary btn-sm" ng-click="resetIt();">&#8634;</button>
+                                                                        <button id="crpt" type="button" class="btn btn-secondary btn-sm " ng-click="cropIt();"> &#9986;</button>
                                                                         <button type="button" class="btn btn-secondary btn-sm" ng-click="zoomOut();"> &#45;</button>
                                                                         <button type="button" class="btn btn-secondary btn-block btn-sm" ng-click="nextp();"> Next &raquo;</button>
                                                                 </div>

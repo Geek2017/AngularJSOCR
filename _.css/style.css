@@ -114,6 +114,7 @@ table {
   position: absolute;
   
 }
+.grabbing {cursor: -webkit-grabbing; cursor: grabbing;}
 
 .grab {cursor: -webkit-grab; cursor: grab;}
 .crosshair {cursor: crosshair;}

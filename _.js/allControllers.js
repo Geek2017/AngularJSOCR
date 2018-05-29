@@ -227,6 +227,15 @@
 			$("#container").addClass("grab");
 			$("#container").removeClass("crosshair");
 		}
+		$("#container").mousedown(function(){
+			$("#container").removeClass("grab");
+			$("#container").addClass("grabbing");
+		});
+
+		$("#container").mouseup(function(){
+			$("#container").removeClass("grabbing");
+			$("#container").addClass("grab");
+		});
 
 		$scope.cropIt = function () {
 			console.log('saving... 1')
@@ -234,6 +243,12 @@
 			$(".card-body").mousedown();
 			$("#container").removeClass("grab");
 			$("#container").addClass("crosshair");
+		}
+
+		$scope.resetIt = function () {
+			localStorage.setItem('zv', 1);
+				$scope.ocrselect.onPageSelect($scope.ocrselect.pdf.currentPage = $scope.ocrselect.pdf.currentPage);
+				$(".card-body").mousedown();
 		}
 
 		$scope.nextp = function () {
