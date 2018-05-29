@@ -53,15 +53,15 @@
 
         <center id="sys">
                 <div class="card text-white bg-primary mb-3" style="max-width: 60rem;">
-                        <div class="card-header">NowScan</div>
+                        <div class="card-header">NowScan <input type="button" value="X" class="float-right btn btn-secondary btn-sm"/></div>
+                        
                         <div class="card-body">
 
                                 <div class="row float-right">
                                         <div>
-                                                        
-
+                                       
                                                 <div class="card text-white bg-primary mb-1" style="max-width: 20rem;">
-                                                        <div class="card-header"> Controls</div>
+                                                        <div class="card-header">Controls</div>
                                                         <div class="card-body">
                                                                 <button id="uploadit" type="button" class="btn btn-secondary btn-block ">Upload File</button>
                                                                 <input on-file-change="ocrselect.fileChangeHandler;" id="img-input" type="file" name="pic" accept="image/*, application/pdf"
