@@ -53,7 +53,7 @@
 
         <center id="sys">
                 <div class="card text-white bg-primary mb-3" style="max-width: 60rem;">
-                        <div class="card-header">NowScan <input type="button" value="X" class="float-right btn btn-secondary btn-sm"/></div>
+                        <div class="card-header">NowScan<input type="button" value="X" class="float-right btn btn-secondary btn-sm" ng-click="logout();"/></div>
                         
                         <div class="card-body">
 
@@ -79,13 +79,14 @@
                                                                 <br>
                                                                 <br>
                                                                 <!-- <label>Language:</label> -->
-                                                                <select class="form-control" ng-model="ocrselect.langs.selectedLang" name="language" id="language" ng-options="lang as lang for lang in ocrselect.langs.list">
-                                                                </select>
+                                                               
                                                                 <!-- <label>API:</label> -->
-                                                                <select class="form-control" id="ocrapi">
+                                                                <select class="form-control" id="ocrapi" ng-click="Api();">
                                                                         <option value="0">Google API</option>
                                                                         <option value="1">Teseract JS</option>
                                                                         <option disabled>Other's</option>
+                                                                </select>
+                                                                <select class="form-control" ng-model="ocrselect.langs.selectedLang" name="language" id="language" ng-options="lang as lang for lang in ocrselect.langs.list" >
                                                                 </select>
                                                                 <!-- <label>Page:</label> -->
                                                                 <select class="form-control" ng-class="ocrselect.dropZone" ng-model="ocrselect.pdf.currentPage" name="pageSelect" id="pageSelect"
@@ -100,8 +101,8 @@
                                                 <div class="card text-white bg-primary mb-1" style="max-width: 20rem;">
                                                         <div class="card-header">Snap view</div>
                                                         <div class="card-body">
-                                                                <div id="results-area">
-                                                                        <canvas id="test-area">
+                                                                <div id="results-area" class="outer">
+                                                                        <canvas id="test-area" class="inner">
                                                                         </canvas>
                                                                 </div>
                                                         </div>
