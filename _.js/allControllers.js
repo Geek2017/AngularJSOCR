@@ -153,7 +153,7 @@
 			canvas.height = dh;
 			context.drawImage.apply(context, options);
 
-			console.log('pic::', dw, dh);
+			
 		}
 
 		function uploadPdf() {
@@ -314,12 +314,14 @@
 				var box = boxDrawer.getBox();
 				imgPDF.captureImg(box, renderCapturedImg);
 				vm.removeBox();
-				// var canvas = document.getElementById('test-area');
-				// console.log(canvas.width);
+				var canvas = document.getElementById('test-area');
+				console.log(canvas.height);
 
-				// if (canvas.width>340){
-				// 	canvas.width="100%";
-				// }
+				if (canvas.height>200){
+					alert('excceed')
+					canvas.height="100%";
+					renderCapturedImg();
+				}
 
 			}
 
