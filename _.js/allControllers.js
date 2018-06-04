@@ -1,5 +1,5 @@
 (function () {
-
+	window.localStorage.removeItem("filename");
 	'use strict';
 	// localStorage.clear();
 	angular
@@ -623,6 +623,8 @@
 		dlnk.href = localStorage.getItem('PDFbase64');;
 
 		dlnk.click();
+
+		alert('File Succesfully Saved Check Your Downloads Folder')
 
 
 
