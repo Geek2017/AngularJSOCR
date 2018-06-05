@@ -13,3 +13,7 @@
 	<div id="loginSubmit"><button class="btn btn-block" name="send" type="submit">EINLOGGEN</button></div>
 	<h4 class="text-center"><strong>Neu bei Eridian? <a href="{base_url}reg/index">Jetzt eigenen Account erstellen!</a></strong></h4>
 </form>
+
+
+
+

@@ -17,38 +17,7 @@
         <br>
 
 
-        <div id="document" class="modal-dialog parent" role="document">
-                <div class="modal-content">
-                        <form >
-                                <div class="modal-header">
-                                        <h5 class="modal-title">Athentication</h5>
-
-                                </div>
-
-                                <div class="modal-body">
-                                        <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                        <span class="input-group-text">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                                </div>
-                                                <input id="email" type="email" class="form-control" required>
-
-                                        </div>
-                                        <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                        <span class="input-group-text">Password</span>
-                                                </div>
-                                                <input id="pwd" type="password" class="form-control" required>
-
-                                        </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                        <input value="Log-In" type="submit" class="btn btn-primary" ng-click="logIn();" />
-
-                                </div>
-                        </form>
-                </div>
-        </div>
+ 
 
 
         <center id="sys">

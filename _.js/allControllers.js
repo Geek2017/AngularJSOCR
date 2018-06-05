@@ -23,6 +23,7 @@
 			currentPage: 1
 		};
 		$('#language').attr('disabled', 'disabled');
+
 		$scope.Api=function(){
 		if ($('#ocrapi').val() == 1) {
 			$('#language').attr('disabled', 'disabled');
@@ -31,30 +32,28 @@
 		}
 	    }
 
-		if (localStorage.getItem('Login') == 1) {
-			$('#sys').show();
-			$('#document').hide();
+		// if (localStorage.getItem('Login') == 1) {
+		// 	$('#sys').show();
+		// 	$('#document').hide();
 
-		} else {
-			$('#sys').hide();
-			$('#document').show();
-		}
+		// } else {
+		// 	$('#sys').hide();
+		// 	$('#document').show();
+		// }
 
 		$scope.logout = function () {
-			localStorage.setItem('Login', 0);
-			$('#sys').hide();
-			$('#document').show();
+			window.location = '/logout';
 		}
 
-		$scope.logIn = function () {
-			if ($('#email').val() !== "" && $('#pwd').val()) {
-				$('#sys').show();
-				$('#document').hide();
-				localStorage.setItem('Login', 1)
-			} else {
-				alert('Password & username required')
-			}
-		}
+		// $scope.logIn = function () {
+		// 	if ($('#email').val() !== "" && $('#pwd').val()) {
+		// 		$('#sys').show();
+		// 		$('#document').hide();
+		// 		localStorage.setItem('Login', 1)
+		// 	} else {
+		// 		alert('Password & username required')
+		// 	}
+		// }
 
 		vm.capturedCanvas = document.getElementById('test-area');
 
