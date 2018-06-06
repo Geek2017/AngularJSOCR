@@ -11,7 +11,7 @@ $parseData['form:errors'] = validation_errors();
 $parseData['formular'] = parse('lgi/formular2.tpl', $parseData, TRUE);
 
 
-render_layout($parseData, 'login');
+render_layout($parseData, 'auth');
 
 /* End of file index.php */
 /* Location: ./system/application/views/lgi/index.php */
